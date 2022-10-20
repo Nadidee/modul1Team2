@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+</head>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+}
+.container{
+
+    background-color: #f2f2f2;
+    padding: 15px;
+    display: flex;
+     
+    justify-content: center; 
+    align-items: center;
+
+    /* justify-content: flex-start;  */
+    /* justify-content: flex-end; */
+    /* justify-content:space-between ; */
+    /* justify-content:space-around ; */
+    /* justify-content: space-evenly; */
+
+
+    /* flex-direction: row-reverse; */ 
+    /* flex-direction: column-reverse; */
+    /* flex-wrap: nowrap; */
+    /* flex-wrap:wrap ; */
+    /* flex-wrap: wrap-reverse; */
+    /* flex-direction: column;  */
+
+
+     /* align-items: stretch; */
+     /* align-items: center; */
+     /* align-items: flex-start   */
+    /* align-items: baseline; */
+    /* align-items: flex-end;  */
+     
+}
+.item{
+    padding: 40px;
+    background-color: chocolate;
+    margin: 30px;
+    font-size: 25px;
+  
+
+}
+.i1{
+    align-self: stretch;
+    order: 6;
+    flex-grow: 1;
+
+}
+
+.i2{
+    height: 200px;
+    order: 5;
+    flex: 0 0 200px;
+    /* flex-basis: 200px; */
+    /* flex-shrink: 0; */
+    /* flex-basis:15% ; */
+}
+
+.i3{
+    align-self: flex-start;
+    order: -2;
+
+}
+
+.i4{
+    align-self: flex-end;
+    order: -1;
+}
+   
+
+
+</style>
+
+
+<body>
+    <div class="container">
+
+<div class="item i1">item1</div>
+<div class="item i2">item2</div>
+<div class="item i3">item3</div>
+<div class="item i4">item4 </div>
+<div class="item i1">item5</div>
+<div class="item i2">item6</div>
+<div class="item i3">item7</div>
+<div class="item i4"> item8 </div>
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
