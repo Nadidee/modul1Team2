@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Javascript Klavye Olayları | MFSoftware Blog</title>
+</head>
+<body>
+    <!-- //onblur -->
+    <label for="">input1:</label><input id="leggNavn" onblur="skriv()" placeholder="skriv Navn">
+    <p id="names"></p> 
+    <br>
+    <br>
+
+    <!-- onfocus -->
+    <label for="">input2:</label><input type="text" onfocus="måfocus()">
+
+    <br>
+    <br>
+
+    <!-- onchange -->
+    <label for="">LANGUAGE:</label><select id="language" onchange="dropsec()">
+        <option value="HTML">HTML</option>
+        <option value="CSS">CSS</option>
+        <option value="JAVASCRIPT">JAVASCRIPT</option>
+      </select>
+      <br>
+      <br>
+
+     <!-- onclick -->
+    <span onclick="mouse_clicked()">Left Mouse Click Left Mouse Click Left Mouse Click</span>
+    <br>
+    <br>
+
+    <!-- onmouseout -->
+    <span onmouseout="out()">COME HERE, GOO!</span>
+    <br>
+    <br>
+
+
+    <!-- onmouseover -->
+    <span onmouseout="over()">COME HERE COME HERE</span>
+    <br>
+    <br>
+
+
+    <!-- onmousemove -->
+    <span onmousemove ="over()">OVERMEG OVERMEG OVERMEG</span>
+      
+
+  <script>
+    // skap function(ONBLUR)
+     function skriv(){
+        var name = document.getElementById("leggNavn");  // fra input
+        document.getElementById("names").innerHTML = "Navnet ditt: "+ name.value;  // forlat input og skriv
+    }
+
+     // skap function(ONFOCUS)
+     function måfocus(){
+        alert("Du har fokuset input");   // det fungerer når du går over input
+     }
+
+     // skap function(ONchange)
+     function dropsec(e){
+        var language = document.getElementById("language");  // lag select option instance 
+        var verdi = language.options[language.selectedIndex].value;  // fikk value 
+        alert(verdi);  // ekrana değeri yazdırdık
+        alert("You chosed a language");  // 
+  }
+     
+    // skap function(onclick)
+    function mouse_clicked(){
+        alert("mouse left button clicked");
+    }
+
+     // skap function(onmouseout)
+    function out(){
+       alert("Hoop Where To My Brother :)");
+     }
+
+
+     // skap function(onmouseout)
+     function over(){
+      alert (" you are at the right place ")
+     }
+
+
+
+  </script>
+</body>
+</html>
